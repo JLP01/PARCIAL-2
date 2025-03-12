@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="container mt-5">
+    <!-- Barra de navegación con Login -->
+    <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-3">
+        <h1 class="text-primary fw-bold m-0 text-white">Sistema de Caja UNAPEC</h1>
+        <div class="ms-auto">
+            <a asp-controller="Account" asp-action="Login" class="btn btn-outline-primary">Iniciar Sesión</a>
+        </div>
+    </div>
+
+    <!-- Encabezado Principal -->
+    <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold text-white">Bienvenido</h2>
+        <p class="lead text-white">Administra pagos, documentos y servicios de manera rápida y eficiente.</p>
+    </div>
+
+    <!-- Sección de opciones -->
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-body text-center">
+                    <i class="fas fa-file-alt fa-3x text-primary mb-3"></i>
+                    <h5 class="card-title fw-semibold text-white">Tipos de Documentos</h5>
+                    <p class="card-text text-muted">Administra los documentos para la gestión de pagos.</p>
+                    <a asp-controller="TipoDocumento" asp-action="Index" class="btn btn-primary w-100">Acceder</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-body text-center">
+                    <i class="fas fa-concierge-bell fa-3x text-success mb-3"></i>
+                    <h5 class="card-title fw-semibold text-white">Servicios Facturables</h5>
+                    <p class="card-text text-muted">Gestiona los servicios facturables para clientes.</p>
+                    <a asp-controller="ServicioFacturable" asp-action="Index" class="btn btn-success w-100">Acceder</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-body text-center">
+                    <i class="fas fa-credit-card fa-3x text-warning mb-3"></i>
+                    <h5 class="card-title fw-semibold text-white">Formas de Pago</h5>
+                    <p class="card-text text-muted">Define y administra las distintas formas de pago.</p>
+                    <a asp-controller="FormaPago" asp-action="Index" class="btn btn-warning w-100">Acceder</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Segunda fila de opciones -->
+    <div class="row mt-4 justify-content-center">
+        <div class="col-md-4">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-body text-center">
+                    <i class="fas fa-hand-holding-usd fa-3x text-info mb-3"></i>
+                    <h5 class="card-title fw-semibold text-white">Modalidades de Pago</h5>
+                    <p class="card-text text-muted">Gestiona las modalidades de pago disponibles.</p>
+                    <a asp-controller="ModalidadPago" asp-action="Index" class="btn btn-info w-100">Acceder</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Incluir FontAwesome para los íconos -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<style>
+    .btn:hover {
+        opacity: 0.85;
+    }
+
+    h1, h2, h5, .lead {
+        color: white !important;
+    }
+</style>

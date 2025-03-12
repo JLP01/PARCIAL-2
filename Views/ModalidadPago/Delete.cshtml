@@ -1,0 +1,16 @@
+@model SistemaCajaUnapec.Models.ModalidadPago
+
+@{
+    ViewData["Title"] = "Eliminar Modalidad de Pago";
+}
+
+<h2>¿Estás seguro de que deseas eliminar esta Modalidad de Pago?</h2>
+
+<div>
+    <h4>@Model.Nombre</h4>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
